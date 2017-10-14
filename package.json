@@ -1,0 +1,17 @@
+{
+  "name": "bloodman-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "test.js"
+  },
+  "author": "hcarriere",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "md5": "^2.2.1",
+    "mongoose": "^4.6.1"
+  }
+}
