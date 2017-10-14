@@ -7,13 +7,14 @@ const path      = require('path')
 const bodyParser= require('body-parser')
 const http		= require('http')
 
-//General cong
+//General conf
 const mongo     = require('./app/mongo')
 const config    = require('./config') //config file
 const app       = express();
 const port      = process.env.PORT || config.server.port;
 const expressServer 	= http.createServer(app);
 
+const CORS = process.env.CORS || '*';
 //Express configuration
 app
 .use(express.static(__dirname + '/views/assets'))   //styles
@@ -27,7 +28,7 @@ const scores = require('./app/scores');
 //headers
 
 app.use(function (req, res, next) {
-    res.setHeader('Access-Control-Allow-Origin', '127.0.0.1');
+    res.setHeader('Access-Control-Allow-Origin', CORS);
     res.setHeader('Access-Control-Allow-Origin', 'http://tetros.fr');
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST');
     res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
