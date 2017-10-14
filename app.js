@@ -24,7 +24,19 @@ app
 }))
 
 const scores = require('./app/scores');
+//headers
 
+app.use(function (req, res, next) {
+    res.setHeader('Access-Control-Allow-Origin', '127.0.0.1');
+    res.setHeader('Access-Control-Allow-Origin', 'http://tetros.fr');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST');
+    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+    next();
+});
+
+
+
+// routes
 app
 
 .get('/api/getBestRun/:map', (req, res) => {	
