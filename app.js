@@ -29,7 +29,6 @@ const scores = require('./app/scores');
 
 app.use(function (req, res, next) {
     res.setHeader('Access-Control-Allow-Origin', CORS);
-    res.setHeader('Access-Control-Allow-Origin', 'http://tetros.fr');
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST');
     res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
     next();
