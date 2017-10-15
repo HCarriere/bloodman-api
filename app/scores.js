@@ -82,7 +82,7 @@ function saveRun(req, callback) {
             map: map,
         });
     }, {
-        time: { $gte: time },
+        time: { $lte: time },
         map: map,
     });
 }
