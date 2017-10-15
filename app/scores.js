@@ -27,7 +27,7 @@ function getBestRun(req, callback) {
     }, {
         map: map
     }, 1, {
-        time: -1
+        time: 1
     });
 }
 
